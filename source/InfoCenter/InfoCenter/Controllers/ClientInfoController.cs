@@ -19,9 +19,29 @@ namespace InfoCenter.Controllers
         }
 
         // GET: ClientInfoes
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View(await _context.ClientInfo.ToListAsync());
+        //}
+
+        public async Task<IActionResult> Index(string searchPhone)
         {
-            return View(await _context.ClientInfo.ToListAsync());
+            var clientInfo = from m in _context.ClientInfo
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchPhone))
+            {
+                clientInfo = clientInfo.Where(s => s.Phone.Contains(searchPhone));
+            }
+
+            var clientInfoSearchVM = new ClientInfoSearchViewModel
+            {
+                ClientInfo = await clientInfo.ToListAsync()
+            };
+
+            return View(clientInfoSearchVM);
+
+            //return View(await clientInfo.ToListAsync());
         }
 
         // GET: ClientInfoes/Details/5
@@ -53,7 +73,7 @@ namespace InfoCenter.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] ClientInfo clientInfo)
+        public async Task<IActionResult> Create([Bind("Id,Surname,Firstname,Patronymic,Address,Phone,NumberTotalCredits,NumberActiveCredits,NumberTotalDeposits,NumberActiveDeposits,NumberRemittances")] ClientInfo clientInfo)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +105,7 @@ namespace InfoCenter.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] ClientInfo clientInfo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Surname,Firstname,Patronymic,Address,Phone,NumberTotalCredits,NumberActiveCredits,NumberTotalDeposits,NumberActiveDeposits,NumberRemittances")] ClientInfo clientInfo)
         {
             if (id != clientInfo.Id)
             {

@@ -1,53 +1,57 @@
-﻿@model IEnumerable<InfoCenter.Models.ClientInfo>
+﻿@model InfoCenter.Models.ClientInfoSearchViewModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Поиск информации о клиенте";
 }
 
-<h1>Index</h1>
+<h1>Поиск информации о клиенте</h1>
+<hr />
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<form asp-controller="ClientInfo" asp-action="Index" method="get">
+    <p>
+        Телефон: <input type="text" asp-for="SearchPhone" />
+        <input type="submit" value="Поиск" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayNameFor(model => model.ClientInfo[0].Phone)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
+                @Html.DisplayNameFor(model => model.ClientInfo[0].Surname)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Genre)
+                @Html.DisplayNameFor(model => model.ClientInfo[0].Firstname)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.ClientInfo[0].Patronymic)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.ClientInfo)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Firstname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Patronymic)
+                </td>
+                <td>
+                    | <a asp-action="Details" asp-route-id="@item.Id">Подробнее</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
