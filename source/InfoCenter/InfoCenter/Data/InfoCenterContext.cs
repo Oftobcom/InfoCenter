@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using InfoCenter.Models;
 
 namespace InfoCenter.Models
 {
@@ -14,5 +15,7 @@ namespace InfoCenter.Models
         }
 
         public DbSet<InfoCenter.Models.ClientInfo> ClientInfo { get; set; }
+
+        public DbSet<InfoCenter.Models.ViewAsteriskCaller> ViewAsteriskCaller { get; set; }
     }
 }

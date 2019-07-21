@@ -1,0 +1,98 @@
+﻿@model InfoCenter.Models.ClientInfo
+
+@{
+    ViewData["Title"] = "Информация о клиенте";
+}
+
+<h1>Информация о клиенте</h1>
+<hr />
+
+<div>
+    <table class="table table-striped table-hover">
+        <tbody>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Phone)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.Surname)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Surname)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.Firstname)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Firstname)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.Patronymic)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Patronymic)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Address)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.NumberTotalCredits)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.NumberTotalCredits)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.NumberActiveCredits)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.NumberActiveCredits)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.NumberTotalDeposits)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.NumberTotalDeposits)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.NumberActiveDeposits)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.NumberActiveDeposits)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayNameFor(model => model.NumberRemittances)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.NumberRemittances)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Index">Back to Index</a>
+</div>

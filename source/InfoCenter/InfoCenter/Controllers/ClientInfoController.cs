@@ -18,7 +18,7 @@ namespace InfoCenter.Controllers
             _context = context;
         }
 
-        // GET: ClientInfoes
+        // GET: ClientInfo
         //public async Task<IActionResult> Index()
         //{
         //    return View(await _context.ClientInfo.ToListAsync());
@@ -44,7 +44,7 @@ namespace InfoCenter.Controllers
             //return View(await clientInfo.ToListAsync());
         }
 
-        // GET: ClientInfoes/Details/5
+        // GET: ClientInfo/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -62,7 +62,26 @@ namespace InfoCenter.Controllers
             return View(clientInfo);
         }
 
-        // GET: ClientInfoes/Create
+        // GET: ClientInfo/ClientInfoByPhone/2100
+        public async Task<IActionResult> InfoByPhone(string id)
+        {
+            //caller = "992927052100";
+            if (string.IsNullOrEmpty(id))
+            {
+                return NotFound();
+            }
+
+            var clientInfo = await _context.ClientInfo
+                .FirstOrDefaultAsync(m => m.Phone == id);
+            if (clientInfo == null)
+            {
+                return NotFound();
+            }
+
+            return View(clientInfo);
+        }
+
+        // GET: ClientInfo/Create
         public IActionResult Create()
         {
             return View();

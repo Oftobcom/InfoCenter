@@ -1,0 +1,42 @@
+﻿@model IEnumerable<InfoCenter.Models.ViewAsteriskCaller>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Вызовы. Последние 10 за текущий день</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Caller)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date_Time)
+            </th>
+            <th>Информация</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Caller)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_Time)
+            </td>
+            <td>
+                | <a asp-controller="ClientInfo" asp-action="InfoByPhone" asp-route-id="@item.Caller">Поиск</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,35 @@
+﻿@model InfoCenter.Models.ViewAsteriskCaller
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>View Asterisk Caller</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Caller)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Caller)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date_Time)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date_Time)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
