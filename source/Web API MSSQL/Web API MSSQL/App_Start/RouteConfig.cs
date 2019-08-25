@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Web_API_MSSQL
+namespace WebApiMsql
 {
     public class RouteConfig
     {

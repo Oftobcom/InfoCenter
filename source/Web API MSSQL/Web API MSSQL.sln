@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.705
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web API MSSQL", "Web API MSSQL\Web API MSSQL.csproj", "{49DFCF50-81CA-4464-B708-57232188D1C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web API MSSQL", "Web API MSSQL\Web API MSSQL.csproj", "{9EA03C79-2AE5-4EF2-BC74-F29D210856C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{49DFCF50-81CA-4464-B708-57232188D1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49DFCF50-81CA-4464-B708-57232188D1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49DFCF50-81CA-4464-B708-57232188D1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49DFCF50-81CA-4464-B708-57232188D1C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA03C79-2AE5-4EF2-BC74-F29D210856C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA03C79-2AE5-4EF2-BC74-F29D210856C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA03C79-2AE5-4EF2-BC74-F29D210856C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA03C79-2AE5-4EF2-BC74-F29D210856C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6799D588-BA78-4737-BE42-D51DE0ADE4F9}
+		SolutionGuid = {EE3527D6-3162-4143-9188-8AF3C656CC88}
 	EndGlobalSection
 EndGlobal

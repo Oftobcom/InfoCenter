@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Web_API_MSSQL")]
+[assembly: AssemblyTitle("WebApiMsql")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Web_API_MSSQL")]
+[assembly: AssemblyProduct("WebApiMsql")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e70ba1a8-2620-406a-9e42-2e3e4fc99348")]
+[assembly: Guid("7011ff49-5fd8-441f-ba30-910bd2f670c6")]
 
 // Version information for an assembly consists of the following four values:
 //
