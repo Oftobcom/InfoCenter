@@ -1,0 +1,1 @@
+Check installation of Dapper in NuGet
