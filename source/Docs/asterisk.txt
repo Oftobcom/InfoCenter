@@ -1,0 +1,3 @@
+apt-get install libsox-dev libsox-fmt-base
+
+файл mssql.php расположить в папке /usr/share/asterisk/agi-bin
