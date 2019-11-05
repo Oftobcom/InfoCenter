@@ -21,5 +21,15 @@ namespace DataLibrary.DataAccess
                 return output;
             }
         }
+
+        public List<AsteriskCallModel> GetAsteriskCallsInfo()
+        {
+            //throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(MssqlDataAccess.GetConnectionString()))
+            {
+                List<AsteriskCallModel> output = connection.Query<AsteriskCallModel>("select * from [ViewAsteriskCaller]").ToList();
+                return output;
+            }
+        }
     }
 }

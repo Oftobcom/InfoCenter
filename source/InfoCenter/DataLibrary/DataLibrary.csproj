@@ -48,6 +48,7 @@
     <Compile Include="DataAccess\DataProcessor.cs" />
     <Compile Include="DataAccess\MssqlDataAccess.cs" />
     <Compile Include="Models\CustomerInfoModel.cs" />
+    <Compile Include="Models\AsteriskCallModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

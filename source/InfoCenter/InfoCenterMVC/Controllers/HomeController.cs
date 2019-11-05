@@ -37,6 +37,17 @@ namespace InfoCenterMVC.Controllers
             return View();
         }
 
+        public ActionResult AsteriskCallers()
+        {
+            List<MvcAsteriskCallModel> calls = new List<MvcAsteriskCallModel>();
+            AsteriskData asteriskData = new AsteriskData();
+            calls = asteriskData.GetAsteriskCallsInfo();
+            //AsteriskCallsViewModel asteriskInfo = new AsteriskCallsViewModel();
+            //asteriskInfo.Calls = calls;
+            //return View(asteriskInfo);
+            return View(calls);
+        }
+
         public ActionResult CustomerSearch()
         {
             return View();

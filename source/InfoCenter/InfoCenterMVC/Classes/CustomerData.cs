@@ -24,12 +24,21 @@ namespace InfoCenterMVC.Classes
                     CustomerId = item.CustomerId,
                     CustomerName = item.CustomerName,
                     CustomerAddress = item.CustomerAddress,
-                    PhoneNumber = item.PhoneNumber,
+                    PhoneNumber1 = item.PhoneNumber1,
+                    PhoneNumber2 = item.PhoneNumber2,
                     CreditCount = item.CreditCount,
                     CreditCountActive = item.CreditCountActive,
                     DepositCount = item.DepositCount,
                     DepositCountActive = item.DepositCountActive,
-                    MTCount = item.MTCount
+                    MTCount = item.MTCount,
+                    PaymentDate = item.PaymentDate,
+                    PaymentSum = item.PaymentSum,
+                    OverdueDay = item.OverdueDay,
+                    LoanOfficer = item.LoanOfficer,
+                    LoanOfficerPhone1 = item.LoanOfficerPhone1,
+                    LoanOfficerPhone2 = item.LoanOfficerPhone2,
+                    MTName = item.MTName,
+                    MTSum = item.MTSum
                 });
             }
 

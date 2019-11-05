@@ -26,8 +26,11 @@ namespace InfoCenterMVC.Models
         [Display(Name = "Адрес")]
         public string CustomerAddress { get; set; } = "";
 
-        [Display(Name = "Номер телефона")]
-        public string PhoneNumber { get; set; } = "";
+        [Display(Name = "Номер телефона, 1")]
+        public string PhoneNumber1 { get; set; } = "";
+
+        [Display(Name = "Номер телефона, 2")]
+        public string PhoneNumber2 { get; set; } = "";
 
         [Display(Name = "Общее количество кредитов")]
         public int CreditCount { get; set; } = 0;
@@ -43,5 +46,41 @@ namespace InfoCenterMVC.Models
 
         [Display(Name = "Количество денежных переводов")]
         public int MTCount { get; set; } = 0;
+
+        public DateTime DateCreated
+        {
+            get
+            {
+                return this.PaymentDate.HasValue
+                   ? this.PaymentDate.Value
+                   : DateTime.Now;
+            }
+
+            set { this.PaymentDate = value; }
+        }
+
+        [Display(Name = "Дата следующего погашения")]
+        public DateTime? PaymentDate { get; set; } = null;
+
+        [Display(Name = "Сумма погашения")]
+        public decimal PaymentSum { get; set; } = 0;
+
+        [Display(Name = "Дни просрочки")]
+        public int OverdueDay { get; set; } = 0;
+
+        [Display(Name = "Кредитный эксперт")]
+        public string LoanOfficer { get; set; } = "";
+
+        [Display(Name = "Номер телефона КЭ, 1")]
+        public string LoanOfficerPhone1 { get; set; } = "";
+
+        [Display(Name = "Номер телефона КЭ, 2")]
+        public string LoanOfficerPhone2 { get; set; } = "";
+
+        [Display(Name = "Отправитель денежного перевода")]
+        public string MTName { get; set; } = "";
+
+        [Display(Name = "Сумма")]
+        public decimal MTSum { get; set; } = 0;
     }
 }

@@ -21,5 +21,17 @@ namespace InfoCenterAPI.Controllers
 
             //return new DataProcessor().GetCustomerInfoByPhone(phone);
         }
+
+        [Route("info/asteriskcallers")]
+        public List<AsteriskCallModel> GetAsteriskCallers()
+        {
+            List<AsteriskCallModel> callers = new List<AsteriskCallModel>();
+            DataProcessor db = new DataProcessor();
+            callers = db.GetAsteriskCallsInfo();
+            return callers;
+
+            //return new DataProcessor().GetCustomerInfoByPhone(phone);
+        }
+
     }
 }
