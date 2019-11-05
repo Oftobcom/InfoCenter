@@ -1,0 +1,6 @@
+<Placemark>
+	<name>Azimuth line</name>
+	<styleUrl>#white_line</styleUrl>
+	<LineString>
+		<tessellate>2</tessellate>
+		<coordinates>

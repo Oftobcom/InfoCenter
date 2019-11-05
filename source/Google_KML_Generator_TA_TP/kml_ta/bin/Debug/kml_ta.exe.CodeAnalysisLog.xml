@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="d:\program files\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta\bin\Debug\kml_ta.exe">
+   <Modules>
+    <Module Name="kml_ta.exe">
+     <Namespaces>
+      <Namespace Name="KML_TA">
+       <Types>
+        <Type Name="Program" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#KML_2G_Hua()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="142">In method 'Program.KML_2G_Hua()', object 'myConnection' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="143">In method 'Program.KML_2G_Hua()', call System.IDisposable.Dispose on object 'myCommand' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="143">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Program.KML_2G_Hua()' could contain the following variables 'ConfigurationManager.AppSettings.Get("Huawei Select Query 2G")'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#KML_2G_Max_Hua()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="629">In method 'Program.KML_2G_Max_Hua()', object 'myConnection' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="630">In method 'Program.KML_2G_Max_Hua()', call System.IDisposable.Dispose on object 'myCommand' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="630">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Program.KML_2G_Max_Hua()' could contain the following variables 'ConfigurationManager.AppSettings.Get("Huawei Select Query 2G")'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#KML_2G_Max_Zte()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1354">In method 'Program.KML_2G_Max_Zte()', object 'myConnection' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1355">In method 'Program.KML_2G_Max_Zte()', call System.IDisposable.Dispose on object 'myCommand' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1355">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Program.KML_2G_Max_Zte()' could contain the following variables 'ConfigurationManager.AppSettings.Get("ZTE Select Query 2G")'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#KML_2G_Zte()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1106">In method 'Program.KML_2G_Zte()', object 'myConnection' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1107">In method 'Program.KML_2G_Zte()', call System.IDisposable.Dispose on object 'myCommand' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1107">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Program.KML_2G_Zte()' could contain the following variables 'ConfigurationManager.AppSettings.Get("ZTE Select Query 2G")'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#KML_3G_Hua()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="392">In method 'Program.KML_3G_Hua()', call System.IDisposable.Dispose on object 'myCommand' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="391">In method 'Program.KML_3G_Hua()', call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="392">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Program.KML_3G_Hua()' could contain the following variables 'ConfigurationManager.AppSettings.Get("Huawei Select Query 3G")'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#KML_3G_Max_Hua()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="874">In method 'Program.KML_3G_Max_Hua()', call System.IDisposable.Dispose on object 'myCommand' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="873">In method 'Program.KML_3G_Max_Hua()', call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="874">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Program.KML_3G_Max_Hua()' could contain the following variables 'ConfigurationManager.AppSettings.Get("Huawei Select Query 3G")'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#KML_3G_Zte()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-07-18 11:40:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1610">In method 'Program.KML_3G_Zte()', call System.IDisposable.Dispose on object 'mssql_cmd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1606">In method 'Program.KML_3G_Zte()', call System.IDisposable.Dispose on object 'mssql_conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1661">In method 'Program.KML_3G_Zte()', call System.IDisposable.Dispose on object 'ora_cmd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Google Earth KML\KML_TA_v.0.3.1\kml_ta" File="Program.cs" Line="1657">In method 'Program.KML_3G_Zte()', call System.IDisposable.Dispose on object 'ora_conn' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

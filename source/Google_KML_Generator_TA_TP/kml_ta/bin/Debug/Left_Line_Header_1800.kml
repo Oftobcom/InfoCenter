@@ -1,0 +1,6 @@
+<Placemark>
+	<name>Left line</name>
+	<styleUrl>#green_line</styleUrl>
+	<LineString>
+		<tessellate>2</tessellate>
+		<coordinates>
