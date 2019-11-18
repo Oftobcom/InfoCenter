@@ -1,6 +1,0 @@
-<Placemark>
-	<name>Right line</name>
-	<styleUrl>#blue_line</styleUrl>
-	<LineString>
-		<tessellate>2</tessellate>
-		<coordinates>

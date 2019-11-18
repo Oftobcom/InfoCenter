@@ -1,6 +1,0 @@
-<Placemark>
-	<name>Main line</name>
-	<styleUrl>#red_line</styleUrl>
-	<LineString>
-		<tessellate>2</tessellate>
-		<coordinates>
