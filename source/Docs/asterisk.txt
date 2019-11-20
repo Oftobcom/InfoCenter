@@ -1,3 +1,9 @@
+sudo su -
+apt-get update
+apt-get upgrade
+
+
+
 apt-get install libsox-dev libsox-fmt-base
 
 файл mssql.php расположить в папке 
