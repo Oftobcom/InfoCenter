@@ -1,0 +1,14 @@
+apt-get install libsox-dev libsox-fmt-base
+
+файл mssql.php расположить в папке 
+/usr/share/asterisk/agi-bin
+
+Файл приветствия лежит в папке
+/var/lib/asterisk/sounds/custom
+
+Файлы записи разговоров лежат в папке
+/var/spool/asterisk/monitor/
+
+
+/var/lib/asterisk/moh
+sox MyWelcome.wav -r 8000 -c 1 -s -w MyWelcome2.wav resample -ql
